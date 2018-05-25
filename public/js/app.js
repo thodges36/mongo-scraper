@@ -7,6 +7,16 @@ $.getJSON("/articles", function(data) {
   }
 });
 
+// // Whenever someone clicks the scrape button, it scrapes new articles
+$(document).ready(function() {
+ $('#scrape').on('click', function (){
+  $.ajax({
+    url: '/scrape',
+    type: 'GET'
+  });
+});
+
+});
 
 // Whenever someone clicks a p tag
 $(document).on("click", "p", function() {
